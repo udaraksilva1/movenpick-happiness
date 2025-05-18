@@ -1,0 +1,1 @@
+<?php /* Vote processing */ ?>

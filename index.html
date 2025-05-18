@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mövenpick Voting</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e6f0f2;
+width: 412px;
+  height: 915px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .logo img {
+      width: 80%;
+    }
+
+    .login-container {
+      margin-top: 20px;
+      background-color: #ff8243;
+      border-radius: 30px 30px 0 0;
+      width: 100%;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .login-container h2 {
+      font-size: 26px;
+      color: white;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    input[type="text"] {
+      width: 90%;
+      padding: 14px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 30px;
+      background-color: #eac0a4;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .login-button {
+      margin-top: 20px;
+      padding: 10px 30px;
+      background-color: transparent;
+      border: 2px solid white;
+      border-radius: 20px;
+      font-size: 16px;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo">
+    <img src="logo.jpg" alt="Mövenpick Logo">
+  </div>
+
+  <div class="login-container">
+    <h2>Lets Begin</h2>
+    <form action="vote.html" method="post">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="text" name="employee_id" placeholder="Employ ID" required>
+      <br>
+      <button class="login-button" type="submit">Login</button>
+    </form>
+  </div>
+
+</body>
+</html>

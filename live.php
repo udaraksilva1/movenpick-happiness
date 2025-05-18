@@ -1,0 +1,1 @@
+<?php /* JSON and vertical bar chart */ ?>

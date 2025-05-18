@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Vote</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f2f2f2;
+      width: 412px;
+      height: 915px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    .emoji {
+      font-size: 50px;
+      margin: 10px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border-radius: 50%;
+      padding: 10px;
+    }
+    .emoji:hover {
+      transform: scale(1.2);
+    }
+    .emoji.selected {
+      box-shadow: 0 0 10px 3px #ffaa00;
+      background-color: #fff7e6;
+    }
+    .submit-button {
+      margin-top: 30px;
+      padding: 10px 30px;
+      font-size: 18px;
+      background-color: #ffaa00;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<audio autoplay loop muted playsinline>
+  <source src="audio/background.mp3" type="audio/mpeg">
+</audio>
+
+  <h1>How was your experience?</h1>
+  <form action="thankyou.html" method="GET">
+    <div>
+      <label>
+        <input type="radio" name="vote" value="happy" required hidden>
+        <span class="emoji">😊</span>
+      </label>
+      <label>
+        <input type="radio" name="vote" value="sad" hidden>
+        <span class="emoji">😞</span>
+      </label>
+    </div>
+    <button class="submit-button" type="submit">Submit</button>
+  </form>
+  <script>
+    // Highlight selected emoji
+    document.querySelectorAll('input[type="radio"]').forEach(input => {
+      input.addEventListener('change', () => {
+        document.querySelectorAll('.emoji').forEach(span => span.classList.remove('selected'));
+        input.nextElementSibling.classList.add('selected');
+      });
+    });
+  </script>
+</body>
+</html>
